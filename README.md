@@ -1,59 +1,70 @@
-# walmart-eda
+# Walmart Customer Purchase Behavior Analysis
 
-# Customer Purchase Behavior Analysis (CLT & Confidence Intervals)
+##  Overview
 
-Overview
+Analyzed Walmart customer transaction data to understand purchase behavior, evaluate spending differences across demographics, and generate data-driven business insights using statistical methods like Confidence Intervals (CI) and the Central Limit Theorem (CLT).
 
-This project analyzes retail transaction data (550K+ records) to understand how customer spending varies across gender, marital status, and age groups using statistical inference and the Central Limit Theorem (CLT).
 
-The goal: determine whether spending differences are statistically meaningful and scalable to population level.
+##  Dataset
 
-# Business Question
+The dataset includes customer attributes such as:
 
-Do men spend more than women per transaction?
+* User_ID,
+* Product_ID
+* Gender
+* Age
+* Occupation
+* City_Category
+* Stay_In_Current_City_Years
+* Marital_Status
+* Product_Category
+* Purchase (transaction amount)
 
-Do married customers spend more than unmarried customers?
 
-Which age group contributes the highest revenue?
+##  Objective
 
-Can we estimate population averages reliably using sampling?
+* Analyze customer spending behavior across demographics
+* Determine if men and women spend differently
+* Apply Confidence Intervals and CLT to generalize findings to the population
+* Identify key factors influencing purchase amount
 
-# Methodology
 
-Data Cleaning & Preprocessing
+##  Key Analysis
 
-Exploratory Data Analysis (EDA)
+* Exploratory Data Analysis (EDA)
+* Univariate & Bivariate Analysis
+* Multivariate Analysis
+* Confidence Interval Estimation
+* Central Limit Theorem (CLT) Validation
 
-Mean Comparison Across Segments
 
-Confidence Interval Estimation (90%, 95%, 99%)
+##  Key Insights
 
-Bootstrapping
+* Male customers spend more per transaction than female customers, and this difference is statistically significant.
+* Age and marital status do not significantly impact spending behavior, as confidence intervals overlap.
+* Purchase distribution is right-skewed, with most transactions being low-value and a few high-value outliers.
+* Product category has the strongest influence on purchase amount, showing clear variation across categories.
+* Other demographic factors like city have some impact on spending
+* Stay duration have minimal impact on spending.
 
-Central Limit Theorem validation (varying sample sizes)
 
-# Key Findings
+##  Customer Segments
 
-Men spend more per transaction than women
+* High Spenders: Customers purchasing high-value product categories
+* Typical Buyers: Majority of customers making moderate-value purchases
+* Occasional High-Value Buyers: Customers responsible for outlier transactions
 
-Married customers spend slightly more than unmarried customers
 
-Age group 26–35 is the highest spending segment
+##  Tools Used
 
-Larger sample sizes produce narrower confidence intervals (CLT validated)
+* Python (Pandas, NumPy)
+* Matplotlib, Seaborn
 
-Spending differences are statistically reliable, not random
 
-# Tools Used
+##  Business Impact
 
-Python
+* Helps design targeted marketing strategies based on gender
+* Identifies high-revenue product categories
+Enables data-driven decision making using statistical validation
 
-Pandas
-
-NumPy
-
-Seaborn
-
-Matplotlib
-
-SciPy
+Supports better inventory and promotion planning
